@@ -15,33 +15,238 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        pluss {
+            bindings = <&kp PLUS>;
+            key-positions = <6 16>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <16 27>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        underscore {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <26 15>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        caret {
+            bindings = <&kp CARET>;
+            key-positions = <5 15>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        mult {
+            bindings = <&kp STAR>;
+            key-positions = <7 17>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        div {
+            bindings = <&kp SLASH>;
+            key-positions = <17 28>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        and {
+            bindings = <&kp AMPERSAND>;
+            key-positions = <18 8>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        or {
+            bindings = <&kp PIPE>;
+            key-positions = <18 29>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <6 7>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        backspaceWord {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <5 6>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        delete {
+            bindings = <&kp DELETE>;
+            key-positions = <7 8>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        leftPar {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <16 17>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        rightPar {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <17 18>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        leftBrac {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <28 27>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        rightBrac {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <28 29>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        percent {
+            bindings = <&kp PERCENT>;
+            key-positions = <4 14>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        tilde {
+            bindings = <&kp TILDE>;
+            key-positions = <14 25>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        dollar {
+            bindings = <&kp DOLLAR>;
+            key-positions = <3 13>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        equal {
+            bindings = <&kp KP_EQUAL>;
+            key-positions = <13 24>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        hash {
+            bindings = <&kp HASH>;
+            key-positions = <2 12>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        backslash {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <23 12>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        at {
+            bindings = <&kp AT_SIGN>;
+            key-positions = <1 11>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        backtick {
+            bindings = <&kp GRAVE>;
+            key-positions = <11 22>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <1 2>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <11 12>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        copy {
+            bindings = <&kp K_COPY>;
+            key-positions = <21 22>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        paste {
+            bindings = <&kp K_PASTE>;
+            key-positions = <23 24>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        lessThan {
+            bindings = <&kp LESS_THAN>;
+            key-positions = <24 25>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        moreThan {
+            bindings = <&kp GREATER_THAN>;
+            key-positions = <26 27>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        gameLayer {
+            bindings = <&to 3>;
+            key-positions = <2 11 13>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         base {
             bindings = <
-           &kp Q  &kp W  &kp E     &kp R  &kp T    &kp Y      &kp U            &kp I          &kp O    &kp P
-           &kp A  &kp S  &kp D     &kp F  &kp G    &kp H      &kp J            &kp K          &kp L    &kp SEMI
-&kp LCTRL  &kp Z  &kp X  &kp C     &kp V  &kp B    &kp N      &kp M            &kp COMMA      &kp DOT  &kp FSLH  &kp APOS
-                         &kp LGUI  &mo 2  &mo 1    &kp SPACE  &kp RIGHT_SHIFT  &kp RIGHT_ALT
+           &kp Q  &kp W  &kp E     &kp R           &kp T        &kp Y      &kp U            &kp I           &kp O    &kp P
+           &kp A  &kp S  &kp D     &kp F           &kp G        &kp H      &kp J            &kp K           &kp L    &kp SEMI
+&kp LCTRL  &kp Z  &kp X  &kp C     &kp V           &kp B        &kp N      &kp M            &kp COMMA       &kp DOT  &kp FSLH  &kp APOS
+                         &kp LALT  &kp LEFT_SHIFT  &kp SPACE    &kp ENTER  &lt 1 BACKSPACE  &lt 2 LEFT_GUI
             >;
         };
 
         nav_num {
             bindings = <
-                   &kp LA(BACKSPACE)   &kp BACKSPACE  &kp UP     &kp DELETE     &kp LA(DELETE)        &kp N5      &kp N6           &kp N7       &kp N8    &kp N9
-                   &kp LA(LEFT_ARROW)  &kp LEFT       &kp DOWN   &kp RIGHT      &kp LA(RIGHT)         &kp N0      &kp N1           &kp N2       &kp N3    &kp N4
-&kp LG(BACKSPACE)  &kp LG(UP_ARROW)    &kp LG(LEFT)   &kp ENTER  &kp LG(RIGHT)  &kp LG(DOWN_ARROW)    &kp PERIOD  &kp PLUS         &kp MINUS    &kp STAR  &kp FSLH  &kp CARET
-                                                      &trans     &trans         &trans                &kp EQUAL   &kp RIGHT_SHIFT  &kp PERCENT
-            >;
-        };
-
-        sym_func {
-            bindings = <
-           &kp ESC        &kp LEFT_BRACE        &kp RIGHT_BRACE        &none             &none             &kp F1   &kp F2           &kp F3   &kp F4   &kp F5
-           &kp TAB        &kp LBKT              &kp RBKT               &kp ENTER         &kp BSLH          &kp F6   &kp F7           &kp F8   &kp F9   &kp F10
-&kp GRAVE  &kp LESS_THAN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GREATER_THAN  &kp UNDERSCORE    &kp F11  &kp F12          &kp F13  &kp F14  &kp F15  &kp F16
-                                                &trans                 &trans            &trans            &none    &kp RIGHT_SHIFT  &none
+       &kp F1   &kp F2   &kp F3  &kp F4  &kp F5     &none   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none
+       &kp F6   &kp F7   &kp F8  &kp F9  &kp F10    &kp N0  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none
+&none  &kp F11  &kp F12  &none   &none   &none      &none   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none
+                         &trans  &trans  &trans     &none   &trans        &none
             >;
         };
 
@@ -54,19 +259,24 @@
             >;
         };
 
-        extra1 { status = "reserved"; };
+        gaming {
+            bindings = <
+        &trans     &kp Q  &kp W  &kp E   &kp R        &trans  &trans  &trans  &trans  &trans
+        &kp LSHFT  &kp A  &kp S  &kp D   &kp F        &trans  &trans  &trans  &trans  &trans
+&trans  &kp LCTRL  &kp Z  &kp X  &kp C   &kp V        &trans  &trans  &trans  &trans  &trans  &trans
+                          &to 0  &trans  &kp SPACE    &trans  &trans  &trans
+            >;
+        };
 
-        extra2 { status = "reserved"; };
-
-        extra3 { status = "reserved"; };
-    };
-
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        device {
-            if-layers = <1 2>;
-            then-layer = <3>;
+        mouseing {
+            bindings = <
+        &trans  &trans  &none   &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
         };
     };
+
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
